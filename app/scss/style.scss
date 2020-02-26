@@ -1,0 +1,566 @@
+@import "colors";
+@import "fonts";
+@import url('https://fonts.googleapis.com/css?family=Exo:100,100i,400,400i,500,500i,600,600i,700,700i|Lato&display=swap');
+
+body {
+  font-family: 'Exo', sans-serif;
+  font-weight: 400;
+  background-color: white;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+
+.button-primary {
+  background-color: $rouge;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 1px rgba(14, 15, 15, 0.25);
+
+  &:hover {
+    background-color: $rouge;
+    box-shadow: 0 3px 3px rgba(14, 15, 15, 0.25);
+  }
+}
+
+
+.header {
+  height: 100vh;
+  background-image: url(images/mountains.png);
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .h1-like {
+    font-size: 38px;
+    font-weight: 100;
+    line-height: 1em;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 3em;
+    }
+  }
+
+  .play {
+    opacity: 0.7;
+    font-size: 4rem;
+    color: #323969;
+    margin-bottom: 0.5em;
+  }
+
+  .button-primary {
+    width: 195px;
+    min-height: 50px;
+  }
+
+  .text {
+    color: #282828;
+    font-size: 14px;
+    letter-spacing: 0.56px;
+  }
+}
+
+
+.section_title--small {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $rouge;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 50px;
+
+}
+
+.section_title--large {
+  margin-top: 0;
+  color: $dark;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 50px;
+  letter-spacing: 1.6px;
+
+  .span {
+    color: $rouge;
+    letter-spacing: 0.05em;
+  }
+
+}
+
+
+.section_main_text {
+  margin-top: 0;
+  opacity: 0.9;
+  color: $dark;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.64px;
+}
+
+
+/* section 1 */
+
+.new_design_fst {
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  .container--left {
+    flex:1;
+    .container--left--content {
+      margin: 150px;
+      @media screen and (max-width: 768px) {
+        margin: 5%;
+      }
+    }
+
+  }
+
+  .container--right {
+    width: 500px;
+    background-color: #ececec;
+    .triangle {
+      position: absolute;
+      border-bottom: 500px solid #ff6d6d;
+      border-left: 500px solid transparent;
+      opacity: 0.8;
+      bottom: 0;
+      right: 0;
+      @media screen and (max-width: 1440px) {
+        border-bottom: 300px solid #ff6d6d;
+        border-left: 300px solid transparent;
+      }
+    }
+
+    @media screen and (max-width: 1440px) {
+      width: 300px;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+}
+
+
+/* section 2 */
+
+.new_features_fst {
+  background: url('images/Pen_holder.png') left top no-repeat,
+  url('images/Earphones.png') 90% 0 no-repeat,
+  url('images/Coffee_Cup.png') right 115% no-repeat;
+  padding-bottom: 20px;
+  @media screen and (max-width: 930px) {
+    background: #f6f5f3;
+  }
+  .content {
+    width: 85%;
+    margin: auto;
+    @media screen and (max-width: 930px) {
+      background: none;
+      padding: 0;
+    }
+
+    .content-top {
+      padding-bottom: 5em;
+
+      .section_title--small {
+
+        text-align: center;
+      }
+
+      .section_title--large {
+        text-align: center;
+      }
+    }
+
+    .content-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      //padding: 0 10%;
+      .features {
+        padding: 0 15px;
+        width: 220px;
+        flex-grow: 2;
+
+        .some-features-tittle {
+          font-size: 22px;
+          font-weight: 500;
+          line-height: 49.97px;
+          /* Text style for "S, ome awe" */
+          letter-spacing: 0.88px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+}
+
+
+/* section 3 */
+
+.new_design_snd {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 15px 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    border-bottom: 600px solid #ff6d6d;
+    border-right: 600px solid transparent;
+    opacity: .8;
+    bottom: 0;
+    z-index: -1;
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .container-left {
+    flex: 2;
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .container-right {
+    padding: 0 10%;
+    @media screen and (max-width: 600px) {
+      padding: 5%;
+    }
+    min-width: 300px;
+    flex: 2;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+    max-width: 1500px;
+  }
+
+}
+
+
+/* section 4 */
+
+.partners {
+  background: black url('images/Group_4.png') center;
+  padding: 70px 0;
+  a{
+    padding: 0 40px ;
+  }
+  .section_main_text {
+    color: white;
+    opacity: 0.5;
+  }
+  .big-tittle {
+    color: white;
+  }
+  .black-content
+  {
+
+    .sponsors
+    {
+      padding-top: 60px;
+      filter: invert(60%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .comment-section
+    {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0 3rem;
+      text-align: center;
+      .small-tittle {
+        color: #ff6d6d;
+      }
+      .comment
+      {
+        padding: 0 20px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 300px;
+      }
+    }
+  }
+
+}
+
+
+/* section 5 */
+
+.new_features_snd {
+  background-color: #ffffff;
+  .section_main_text{
+    padding: 30px 20%;
+    @media screen and (max-width: 768px) {
+      padding: 30px 5%;
+    }
+  }
+  img
+  {
+    max-width: 90%;
+  }
+
+}
+
+
+/* section 6 */
+.new_features_thrd {
+  background-color: #323969;
+  .content-1000-designers{
+    padding: 100px 20px;
+    color: white;
+    @media screen and (max-width: 768px) {
+      padding: 15px 0;
+    }
+    .section_title--large {
+      color: white;
+      margin-bottom: 1em;
+    }
+    a {
+      color: #95aabf;
+      cursor: pointer;
+    }
+    .free-trial {
+      padding: 10px;
+      flex: 1;
+      width: 60%;
+      height: 40px;
+      .button-primary {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+
+    .inputs {
+      display: flex;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    input
+    {
+      width: 100%;
+      flex: 1;
+      padding-left: 40px;
+      margin: 10px 10px;
+      border-radius: 3px;
+      border: 1px solid rgba(255,255,255,0.5);
+      background-color: rgba(246,245,243,0.1);
+      height: 40px;
+
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: $normal-weight;
+      line-height: 75px;
+      letter-spacing: 0.64px;
+
+      @media screen and (max-width: 768px) {
+        flex: unset;
+        width: unset;
+      }
+
+      &::placeholder {
+        text-transform: uppercase;
+        color: #f6f5f3;
+        opacity: 0.5;
+      }
+    }
+  }
+
+}
+
+
+footer {
+  position: relative;
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    /* Text style for "Aenean lac" */
+    letter-spacing: 0.56px;
+    color: #282828;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  form {
+    display: flex;
+    width: 100%;
+  }
+  input {
+    width: 100%;
+    margin-right: 0;
+    border-radius: 3px;
+    border: 1px solid #8d8d8d;
+    border-right: none;
+    background-color: rgba(246, 245, 243, 0.1);
+    height: 40px;
+    padding: 0 30px;
+
+    font-size: 16px;
+    line-height: 75px;
+    letter-spacing: 0.64px;
+
+    &::placeholder {
+      text-transform: uppercase;
+      color: #000;
+      opacity: 0.4;
+    }
+  }
+  button {
+    display: flex;
+    cursor: pointer;
+    border: none;
+    background-color: #ff6d6d;
+    border-radius: 0 3px 3px 3px;
+    padding: 0 13px;
+    margin-left: -3px;
+    box-shadow: 0 1px 1px rgba(14, 15, 15, 0.25);
+    &:hover {
+      background-color: #EC6262;
+      box-shadow: 0 3px 3px rgba(14, 15, 15, 0.25);
+    }
+
+    i{
+      color: white;
+    }
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+    li {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 26px;
+      /* Text style for "Aenean lac" */
+      letter-spacing: 0.56px;
+      opacity: 0.56;
+      color: #282828;
+    }
+  }
+  .row {
+    padding: 60px;
+    width: 80%;
+    display: flex;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      padding: 5%;
+      margin: auto;
+      width: 80%;
+    }
+    .col-large {
+      flex: 2;
+      text-align: unset;
+
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0.64px;
+        opacity: 0.66;
+      }
+
+      h4 {
+        margin-bottom: 0;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 49.97px;
+        letter-spacing: 0.88px;
+      }
+    }
+    .col {
+      flex: 1;
+      text-align: unset;
+      padding: 0 15px;
+
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0.64px;
+        opacity: 0.66;
+      }
+
+      h4 {
+        margin-bottom: 0;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 49.97px;
+        letter-spacing: 0.88px;
+      }
+    }
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    border-top: 250px solid #ff6d6d;
+    border-left: 250px solid transparent;
+    opacity: 0.8;
+    top: 0;
+    right: 0;
+    z-index: -2;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .social {
+    margin-right: 20px;
+    text-align: center;
+    opacity: 0.6;
+    padding-top: 10px;
+  }
+}
+
+
+.company_icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+
+
+
+
+
+
+
+
